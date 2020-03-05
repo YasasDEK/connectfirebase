@@ -1,6 +1,7 @@
 package af.connectfirebase;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 EditText firstname, mobile, email;
 Button button;
 DatabaseReference reff;
+Member member;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,18 @@ DatabaseReference reff;
         mobile = (EditText)findViewById((R.id.mobile));
         email = (EditText)findViewById((R.id.email));
         button = (Button) findViewById((R.id.button));
+        member = new Member();
         reff = FirebaseDatabase.getInstance().getInstance().getReference().child("member");
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mobilenumber = Integer.parseInt(mobile.getText().toString().trim());
+                member.setFname(firstname.getText().toString().trim());
+                member.setEmailaddress(email.getText().toString().trim());
+                member.setMobilenumber(mobilenumber);
+                reff.push().setValue(member);
+                Toast.makeText(MainActivity.this,"data inserted successfully", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
