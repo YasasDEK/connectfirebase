@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1031285381453",
+    "firebase_url": "https://connectfirebase-d2d04.firebaseio.com",
+    "project_id": "connectfirebase-d2d04",
+    "storage_bucket": "connectfirebase-d2d04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031285381453:android:6ed890603401604b953f04",
+        "android_client_info": {
+          "package_name": "af.connectfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031285381453-tjm45u9shj21jn3l3693rjbv40mcl348.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoxySE18EK2NfU4BW4qSxBXW9uUsMMtSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031285381453-tjm45u9shj21jn3l3693rjbv40mcl348.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
