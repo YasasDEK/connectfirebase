@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 EditText firstname, mobile, email;
 Button button, button2;
 Button button3;
+Button button4;
 DatabaseReference reff;
 Member member;
     @Override
@@ -28,7 +29,7 @@ Member member;
         firstname = (EditText)findViewById((R.id.firstname));
         mobile = (EditText)findViewById((R.id.mobile));
         email = (EditText)findViewById((R.id.email));
-        button = (Button) findViewById((R.id.button4));
+        button = (Button) findViewById((R.id.button));
         member = new Member();
         reff = FirebaseDatabase.getInstance().getInstance().getReference().child("member");
         button.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,14 @@ Member member;
                 openActivity2();
             }
         });
+
+        button4 = (Button) findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity3();
+            }
+        });
         }
 
         public void openActivity() {
@@ -68,6 +77,11 @@ Member member;
 
         public void openActivity2() {
             Intent intent = new Intent(this, Main3Activity.class);
+            startActivity(intent);
+        }
+
+        public void openActivity3() {
+            Intent intent = new Intent(this, Main4Activity.class);
             startActivity(intent);
         }
 
