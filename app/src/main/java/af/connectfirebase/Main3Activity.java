@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,7 +27,7 @@ public class Main3Activity extends AppCompatActivity {
         a = (TextView) findViewById((R.id.firstname));
         b = (TextView)findViewById((R.id.mobile));
         c = (TextView)findViewById((R.id.email));
-        button = (Button)findViewById(R.id.button4);
+        button = (Button)findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

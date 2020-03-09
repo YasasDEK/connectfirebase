@@ -31,7 +31,7 @@ public class Main2Activity extends AppCompatActivity {
         firstname = (EditText)findViewById((R.id.firstname));
         mobile = (EditText)findViewById((R.id.mobile));
         email = (EditText)findViewById((R.id.email));
-        button = (Button) findViewById((R.id.button4));
+        button = (Button) findViewById((R.id.button));
         obj1 = new Member2();
         reff = FirebaseDatabase.getInstance().getInstance().getReference().child("member2");
         reff.addValueEventListener(new ValueEventListener() {
